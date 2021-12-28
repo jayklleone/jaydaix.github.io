@@ -1,0 +1,47 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+$color: ("1":#35393C ,"2":#DEE0E2 ,"3":#FEC753 ,"4":#FFFFFF ,"5":#8A4BDE) 
+$color1: #35393C 
+$color2: #DEE0E2 
+$color3: #FEC753 
+$color5: #8A4BDE 
+
+@each $index,$colors in $color 
+    .bg-theme-#{$index} 
+        background-color: $colors !important
+    .bg-theme-active-#{$index}
+        background-color: lighten($colors,8%) !important
+    .text-theme-#{$index} 
+        color: $colors !important
+    .fill-theme-#{$index}
+        fill: $colors !important
+    .btn-theme-#{$index}
+        border-color: $colors
+        background-color: $colors
+    a.text-theme-#{$index} 
+        color: lighten($colors,16%) !important
+        &:hover
+            color: $colors !important
+
+.bg-theme-yellow
+    background-color: #ffb100 !important
+.text-theme-yellow
+    color: #ffb100 !important
+.sticky-top.navbar-light 
+    .navbar-brand 
+        h1
+            color: $color3
+        
+.hero-header
+    background-image: url('../../template/template1/img/blob-top-left.png'), url('../../template/template1/img/blob-top-right.png'), url('../../template/template1/img/blob-bottom-left.png'), url('../../template/template1/img/blob-bottom-right.png'), url('../../template/template1/img/blob-center.png'),url('../../template/template1/img/bg-bottom.png?v=2')
+    background-position: left 0px top 0px, right 0px top 0px, left 0px bottom 0px, right 0px bottom 0px, center center, center bottom
+    background-size: auto, auto, auto, auto, auto, contain
+    background-repeat: no-repeat
+.footer
+    background: url('../../template/template1/img/bg-top.png?v=2'), url('../../template/template1/img/map.png')
+    background-position: center top, center center
+    background-size: contain, auto
+    background-repeat: no-repeat
